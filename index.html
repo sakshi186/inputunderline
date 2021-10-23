@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+          <style>
+              body{
+                  background:#1d1d1d;
+              }
+              .myform{
+                  margin-left:100px;
+                  margin-top:30px;
+              }
+              .myform > input[name="fname"]{
+                  height:60px;
+                  width:346px;
+                  background:#2B2B2B;
+                  outline:none;
+                  border:none;
+                  padding-left:20px;
+              }
+              .myform > button[type="submit"]{
+                  width:275px;
+                  height:50px;
+                  border-radius:0px;
+                  border:none;
+                  background:transparent;
+                  border:1px solid #08fdd8;
+                  color:#08fdd8;
+                  position:relative;
+                  overflow:hidden;
+                  cursor: pointer;
+              }
+              .myform > button[type="submit"] > div{
+                width:326px;
+                height:50px;
+                background:#08fdd8;
+                position:absolute;
+                top:0px;
+                left:-350px;
+                transform:skewX(-20deg);
+                transition:all 0.2s linear;
+                z-index: 9000;
+              }
+              .myform > button[type="submit"]:hover > div{
+                  left:-25px;
+              }
+              .myform > button[type="submit"] > span{
+                  position:relative;
+                  z-index:10000;
+                  transition:all 0.2s linear;
+              }
+              .myform > button[type="submit"]:hover > span{
+                  color:#2B2B2B;
+              }
+          </style>
+    </head>
+    <body>
+        <form class="myform">
+            <input type="text" name="fname" placeholder="Name">
+            <br>
+            <br>
+            <button type="submit">
+               <span> Send message!</span>
+                <div></div>
+            </button>
+        </form>
+    </body>
+    </html>
